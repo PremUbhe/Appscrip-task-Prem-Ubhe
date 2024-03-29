@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -29,7 +30,7 @@ const Footer = () => {
           <p className="mb-4">customercare@mettamuse.com</p>
           <h2 className="font-bold py-5 sm:py-2">CURRENCY</h2>
           <div className="flex items-center pb-2">
-            <img className="img-fulid" src="US.png" alt="US" />
+            <Image src={"/US.png"} alt="Us" width={24} height={24}/>
             <h3 className="font-bold py-2 mx-2">+ USD</h3>
           </div>
           <p>

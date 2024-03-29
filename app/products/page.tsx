@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import RecommedationBtn from "../components/RecommedationBtn";
 import Filters from "../components/Filters";
 import LikedBtn from "../components/LikedBtn";
@@ -34,13 +35,9 @@ const ProductsPage = async () => {
         <div className="flex flex-wrap justify-around">
           {products.map((product) => {
             return (
-              <div className="card card-compact w-72 p-2 bg-white m-2 rounded shadow-xl">
+              <div className="card card-compact w-72 p-2 bg-white m-2 rounded shadow-xl" key={product.id}>
                 <figure>
-                  <img
-                    className="aspect-square"
-                    src={product.image}
-                    alt={product.title}
-                  />
+                  <Image className="aspect-square" src={product.image} alt={product.title} width={300} height={300}/>
                 </figure>
                 <div className="card-body flex flex-row items-center bg-white">
                   <h2 className="truncate font-bold w-11/12">
